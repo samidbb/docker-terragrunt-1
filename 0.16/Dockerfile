@@ -7,5 +7,7 @@ RUN apk add --update curl && \
     echo "Downloaded Terragrunt v${TERRAGRUNT_VERSION}" && \
     mv terragrunt_linux_amd64 /bin/terragrunt && \
     chmod +x /bin/terragrunt
+
+RUN ssh -T -o "StrictHostKeyChecking no" -o "PubkeyAuthentication no" git@github.com || true
     
 ENTRYPOINT ["/bin/terragrunt"]
