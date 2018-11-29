@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.11.8
+FROM hashicorp/terraform:0.11.10
 
 ENV TERRAGRUNT_VERSION=0.16.14
 
